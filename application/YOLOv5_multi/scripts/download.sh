@@ -28,9 +28,9 @@ then
     unzip models.zip -d ../
     rm models.zip
     pushd ../models/
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv5/models_a2_0921/BM1688.zip
-    unzip BM1688.zip
-    rm -r BM1688.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv5/models_a2_0921/BM1688.zip
+    # unzip BM1688.zip
+    # rm -r BM1688.zip
     popd
     echo "models download!"
 else

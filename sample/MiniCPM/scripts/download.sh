@@ -30,9 +30,9 @@ fi
 # 检查 BM1688文件夹 是否存在
 if [ ! -d "../models/BM1688" ]; 
 then
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/BM1688.zip
-    unzip BM1688.zip -d ../models/
-    rm BM1688.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/BM1688.zip
+    # unzip BM1688.zip -d ../models/
+    # rm BM1688.zip
     echo "BM1688 download!"
 else
     echo "BM1688 folder exist! Remove it if you need to update."
@@ -41,9 +41,9 @@ fi
 # 检查 CV186X 文件夹 是否存在
 if [ ! -d "../models/CV186X" ]; 
 then
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/CV186X.zip
-    unzip CV186X.zip -d ../models/
-    rm CV186X.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/CV186X.zip
+    # unzip CV186X.zip -d ../models/
+    # rm CV186X.zip
     echo "CV186X download!"
 else
     echo "CV186X folder exist! Remove it if you need to update."
@@ -52,9 +52,9 @@ fi
 # 检查 BM1684X文件夹 是否存在
 if [ ! -d "../models/BM1684X" ]; 
 then
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/BM1684X.zip
-    unzip BM1684X.zip -d ../models/
-    rm BM1684X.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/BM1684X.zip
+    # unzip BM1684X.zip -d ../models/
+    # rm BM1684X.zip
     echo "BM1684X download!"
 else
     echo "BM1684X folder exist! Remove it if you need to update."

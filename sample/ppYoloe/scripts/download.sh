@@ -43,11 +43,11 @@ then
     unzip models.zip -d ../models
     rm models.zip
     pushd ../models/
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYoloe/models_20240416/BM1688.tgz
-    tar xvf BM1688.tgz
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYoloe/models_20240416/CV186X.tgz
-    tar xvf CV186X.tgz
-    rm -r *.tgz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYoloe/models_20240416/BM1688.tgz
+    # tar xvf BM1688.tgz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYoloe/models_20240416/CV186X.tgz
+    # tar xvf CV186X.tgz
+    # rm -r *.tgz
     popd
     echo "models download!"
 else

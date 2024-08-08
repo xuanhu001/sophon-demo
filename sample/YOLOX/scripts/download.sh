@@ -25,9 +25,9 @@ then
     unzip models.zip -d ../
     rm models.zip
 
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOX/models_20240422/CV186X_models.tar.gz
-    tar -zxvf CV186X_models.tar.gz -C ../
-    rm CV186X_models.tar.gz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOX/models_20240422/CV186X_models.tar.gz
+    # tar -zxvf CV186X_models.tar.gz -C ../
+    # rm CV186X_models.tar.gz
 
     echo "models download!"
 else

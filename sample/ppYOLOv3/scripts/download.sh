@@ -38,12 +38,12 @@ then
     pushd ../models/
     python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/BM1684.tgz
     tar xvf BM1684.tgz
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/BM1684X.tgz
-    tar xvf BM1684X.tgz
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/BM1688.tgz
-    tar xvf BM1688.tgz
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/CV186X.tgz
-    tar xvf CV186X.tgz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/BM1684X.tgz
+    # tar xvf BM1684X.tgz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/BM1688.tgz
+    # tar xvf BM1688.tgz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/ppYOLOv3/models_20240416/CV186X.tgz
+    # tar xvf CV186X.tgz
     rm -r *.tgz
     mkdir onnx
     pushd onnx

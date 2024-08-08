@@ -47,13 +47,13 @@ then
     unzip onnx.zip -d ../models
     rm onnx.zip
 
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/GroundingDINO/bm1688_cv186x/BM1688.zip
-    unzip BM1688.zip -d ../models
-    rm BM1688.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/GroundingDINO/bm1688_cv186x/BM1688.zip
+    # unzip BM1688.zip -d ../models
+    # rm BM1688.zip
 
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/GroundingDINO/bm1688_cv186x/CV186X.zip
-    unzip CV186X.zip -d ../models
-    rm CV186X.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/GroundingDINO/bm1688_cv186x/CV186X.zip
+    # unzip CV186X.zip -d ../models
+    # rm CV186X.zip
 
     echo "models download!"
 else

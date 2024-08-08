@@ -27,10 +27,10 @@ then
     pushd ../models
     python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/BM1684.tar.gz
     tar xvf BM1684.tar.gz
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/BM1684X.tar.gz
-    tar xvf BM1684X.tar.gz
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/BM1688.tar.gz
-    tar xvf BM1688.tar.gz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/BM1684X.tar.gz
+    # tar xvf BM1684X.tar.gz
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/BM1688.tar.gz
+    # tar xvf BM1688.tar.gz
     python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/onnx.tar.gz
     tar xvf onnx.tar.gz
     python3 -m dfss --url=open@sophgo.com:sophon-demo/YOLOv8_seg/models/torch.tar.gz

@@ -29,12 +29,12 @@ then
     rm models.zip
     rm ../models/BM1684/ch_PP-OCRv3_*_int8.bmodel ../models/BM1684X/ch_PP-OCRv3_*_int8.bmodel #int8 has bad performance, if you want to test it, you can comment this line
     pushd ../models/
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/PP-OCR/models_231220/BM1688.zip
-    unzip BM1688.zip
-    rm -r BM1688.zip
-    python3 -m dfss --url=open@sophgo.com:sophon-demo/PP-OCR/models_240412/CV186X.zip
-    unzip CV186X.zip
-    rm -r CV186X.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/PP-OCR/models_231220/BM1688.zip
+    # unzip BM1688.zip
+    # rm -r BM1688.zip
+    # python3 -m dfss --url=open@sophgo.com:sophon-demo/PP-OCR/models_240412/CV186X.zip
+    # unzip CV186X.zip
+    # rm -r CV186X.zip
     popd
     echo "models download!"
 else
