@@ -1,7 +1,11 @@
 #!/bin/bash
 # 注意会将文件传输至目标文件的子目录下！
 set -e
-scp -r /home/data/wcy/DEBUG/DLWP/sophon-demo/sample/P2PNet linaro@IP:/mnt/sophonWP/sophon-demo/sample/P2PNet || exit 1
+
+# 测试
+# echo "scp -r /home/data/wcy/DEBUG/DLWP/sophon-demo/sample/P2PNet linaro@$IP:/mnt/sophonWP/sophon-demo/sample/P2PNet"
+scp -r /home/data/wcy/DEBUG/DLWP/sophon-demo/sample/P2PNet linaro@$IP:/mnt/sophonWP/sophon-demo/sample/P2PNet || exit 1
+
 scp -r /home/data/wcy/DEBUG/DLWP/sophon-demo/sample/PP-OCR linaro@IP:/mnt/sophonWP/sophon-demo/sample/PP-OCR || exit 1
 scp -r /home/data/wcy/DEBUG/DLWP/sophon-demo/sample/Real-ESRGAN linaro@IP:/mnt/sophonWP/sophon-demo/sample/Real-ESRGAN || exit 1
 scp -r /home/data/wcy/DEBUG/DLWP/sophon-demo/sample/SCRFD linaro@IP:/mnt/sophonWP/sophon-demo/sample/SCRFD || exit 1
