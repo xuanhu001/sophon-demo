@@ -280,7 +280,7 @@ def argsparser():
     parser.add_argument(
         "--bmodel",
         type=str,
-        default="../models/lprnet_fp32_1b.bmodel",
+        default="../models/BM1684/lprnet_fp32_1b.bmodel",
         help="path of bmodel",
     )
     parser.add_argument("--dev_id", type=int, default=0, help="tpu id")
@@ -289,5 +289,10 @@ def argsparser():
 
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    print("current work dir: ", os.getcwd())
     args = argsparser()
+    # 判断权重文件的存在性
+    if not os.path.exists(args.bmodel):
+        raise Exception("bmodel file not found: {}".format(args.bmodel))
     main(args)

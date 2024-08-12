@@ -644,3 +644,7 @@ if __name__ == "__main__":
     from utils.time_utils import TimeStamp
 
     TimeStamp().print()
+# /opt/sophon/sophon-opencv-latest/opencv-python/
+# uu retinaface_opencv.py --bmodel ../data/models/BM1684X/retinaface_mobilenet0.25_fp32_1b.bmodel --network mobile0.25 --input_path ../data/images/WIDERVAL --tpu_id 0 --conf 0.02 --nms 0.4 --use_np_file_as_input False
+
+

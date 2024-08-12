@@ -1,19 +1,28 @@
+# Define log levels with date
+INFO=$(tput setaf 2; echo -n "[INFO] [$(date)]"; tput sgr0)
+WARN=$(tput setaf 3; echo -n "[WARN] [$(date)]"; tput sgr0)
+ERROR=$(tput setaf 1; echo -n "[ERROR] [$(date)]"; tput sgr0)
+
+# Define colors
+NOTE_INFO=$(tput setaf 6)
+
 #!/bin/bash
 pip3 install dfss --upgrade
 
 res=$(which unzip)
 if [ $? != 0 ];
 then
-    echo "Please install unzip on your system!"
-    echo "To install, use the following command:"
-    echo "sudo apt install unzip"
+    echo "${INFO} Please install unzip on your system!"
+    echo "${INFO} To install, use the following command:"
+    echo "${INFO} sudo apt install unzip"
     exit
 fi
 
 scripts_dir=$(dirname $(readlink -f "$0"))
 # echo $scripts_dir
 
-pushd $scripts_dir
+pushd $scripts_dir > /dev/null
+echo "${INFO} Changed directory to ${NOTE_INFO}$(pwd)"
 
 # models
 if [ ! -d "../models/BM1684X/" ] || [! -d "../models/onnx_pt"]; 
@@ -27,9 +36,9 @@ then
     rm bmodels.zip
     rm onnx_pt.zip
 
-    echo "bmodels download!"
+    echo "${INFO} bmodels download!"
 else
-    echo "models exists!"
+    echo "${INFO} models exists!"
 fi
 
 # tokenizer
@@ -41,8 +50,9 @@ then
     unzip tokenizer.zip -d ../models/
     rm tokenizer.zip
 
-    echo "tokenizer download!"
+    echo "${INFO} tokenizer download!"
 else
-    echo "tokenizer exists!"
+    echo "${INFO} tokenizer exists!"
 fi
-popd
+popd > /dev/null
+echo "${INFO} Changed directory back to ${NOTE_INFO}$(pwd)"

@@ -22,6 +22,11 @@ for dir in $directories; do
             size=$(du -sh "$dir/models" | awk '{print $1}')
             # Print the directory name and the size of the "models" folder
             echo -e "[${GREEN}INFO ${NC}] Directory: ${YELLOW}$dir${NC}, Models folder size: $size"
+        else 
+            # Print warning message if "models" folder is empty
+            echo -e "[${YELLOW}WARNING${NC}] Directory: ${YELLOW}$dir${NC}, Models folder is empty"
+            # 不输出
+            :
         fi
     else
         # Print error message if "models" folder is not found

@@ -9,7 +9,9 @@
 
 import os
 ##请修改为您对应的预测结果文件
-source_txt = 'retinaface_mobilenet0.25_fp32_1b.bmodel_opencv_WIDERVAL_python_result.txt'
+# source_txt = 'retinaface_mobilenet0.25_fp32_1b.bmodel_opencv_WIDERVAL_python_result.txt'
+# source_txt = '../../python/results/retinaface_mobilenet0.25_fp32_1b.bmodel_opencv_face_python_result.txt' # 不能正常运行
+source_txt = '../../python/results/retinaface_mobilenet0.25_fp32_1b.bmodel_opencv_WIDERVAL_python_result.txt'
 
 with open(source_txt, 'r') as f:
     lines = f.readlines()

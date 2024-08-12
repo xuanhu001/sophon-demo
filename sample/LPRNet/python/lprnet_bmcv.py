@@ -357,5 +357,45 @@ def argsparser():
 
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     args = argsparser()
     main(args)
+    # uu tools/eval_ccpd.py --gt_path datasets/test_label.json --result_json python/results/lprnet_fp32_1b.bmodel_test_bmcv_python_result.json
+    # INFO:root:ACC = 0.88
+    # uu tools/eval_ccpd.py --gt_path datasets/test_label.json --result_json python/results/lprnet_fp32_1b.bmodel_test_opencv_python_result.json 
+    # INFO:root:ACC = 0.894
+
+    # uu lprnet_opencv.py --input ../datasets/test --bmodel ../models/BM1684/lprnet_int8_1b.bmodel --dev_id 0
+    # INFO:root:decode_time(ms): 0.40
+    # INFO:root:preprocess_time(ms): 0.13
+    # INFO:root:inference_time(ms): 1.22
+    # INFO:root:postprocess_time(ms): 0.12
+    # ./results/lprnet_int8_1b.bmodel_test_opencv_python_result.json
+    # uu tools/eval_ccpd.py --gt_path datasets/test_label.json --result_json python/results/lprnet_int8_1b.bmodel_test_opencv_python_result.json
+    # INFO:root:ACC = 0.887
+
+    # uu lprnet_opencv.py --input ../datasets/test --bmodel ../models/BM1684/lprnet_int8_4b.bmodel --dev_id 0
+    # INFO:root:decode_time(ms): 0.24
+    # INFO:root:preprocess_time(ms): 0.08
+    # INFO:root:inference_time(ms): 0.43
+    # INFO:root:postprocess_time(ms): 0.06
+    # ./results/lprnet_int8_4b.bmodel_test_opencv_python_result.json
+    # uu tools/eval_ccpd.py --gt_path datasets/test_label.json --result_json python/results/lprnet_int8_4b.bmodel_test_opencv_python_result.json
+    # INFO:root:ACC = 0.898
+
+    # uu lprnet_bmcv.py --input ../datasets/test --bmodel ../models/BM1684/lprnet_int8_1b.bmodel --dev_id 0
+    # INFO:root:decode_time(ms): 0.72
+    # INFO:root:preprocess_time(ms): 0.35
+    # INFO:root:inference_time(ms): 0.96
+    # INFO:root:postprocess_time(ms): 0.14
+    # ./results/lprnet_int8_1b.bmodel_test_bmcv_python_result.json
+    # uu tools/eval_ccpd.py --gt_path datasets/test_label.json --result_json python/results/lprnet_int8_1b.bmodel_test_bmcv_python_result.json
+    # INFO:root:ACC = 0.873
+
+    # uu lprnet_bmcv.py --input ../datasets/test --bmodel ../models/BM1684/lprnet_int8_4b.bmodel --dev_id 0
+    # INFO:root:decode_time(ms): 0.54
+    # INFO:root:preprocess_time(ms): 0.28
+    # INFO:root:inference_time(ms): 0.33
+    # INFO:root:postprocess_time(ms): 0.06
+    # uu tools/eval_ccpd.py --gt_path datasets/test_label.json --result_json python/results/lprnet_int8_4b.bmodel_test_bmcv_python_result.json
+    # INFO:root:ACC = 0.884

@@ -8,34 +8,34 @@ NC='\033[0m' # No Color
 # 定义所有工程目录
 projects=(
     # "Baichuan2"
-    "BERT"
-    "ByteTrack"
-    "C3D"
-    "CenterNet"
+    # "BERT"
+    # "ByteTrack"
+    # "C3D"
+    # "CenterNet"
     # "ChatGLM2"
     # "ChatGLM3"
     # "ChatGLM4"
     # "CLIP"
-    "DeepSORT"
+    # "DeepSORT"
     # "GroundingDINO"
     # "Llama2"
-    "LPRNet"
-    "MiniCPM"
-    "OpenPose"
-    "P2PNet"
-    "PP-OCR"
+    # "LPRNet"
+    # "MiniCPM"
+    # "OpenPose"
+    # "P2PNet"
+    # "PP-OCR"
     "ppYoloe"
     "ppYOLOv3"
-    "Qwen"
+    # "Qwen"
     # "Qwen-VL-Chat"
     # "Qwen1_5"
     "Real-ESRGAN"
-    "ResNet"
+    # "ResNet"
     "RetinaFace"
     # "SAM"
-    "SCRFD"
+    # "SCRFD"
     # "Seamless"
-    "segformer"
+    # "segformer"
     "SSD"
     # "StableDiffusionV1_5"
     # "StableDiffusionXL"
@@ -72,7 +72,7 @@ for project in ${projects[@]}; do
     ((count++))
     # echo -e "${YELLOW}$count${NC}"
     if [ -d "${project}" ]; then
-        pushd ${project} > /dev/null
+        pushd ${project} >/dev/null
         if [ -f "./scripts/download.sh" ] && [ -x "./scripts/download.sh" ]; then
             echo -e "${GREEN}[INFO]${YELLOW}[序号$count]当前目录是：${NC}$(pwd)"
             ./scripts/download.sh
@@ -80,7 +80,7 @@ for project in ${projects[@]}; do
         else
             echo -e "${RED}[ERROR]${YELLOW}在目录${project}中找不到可执行的download.sh脚本${NC}"
         fi
-        popd > /dev/null
+        popd >/dev/null
     else
         echo -e "${RED}[ERROR]${YELLOW}找不到目录${project}${NC}"
     fi
